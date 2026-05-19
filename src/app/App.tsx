@@ -9,6 +9,8 @@ import { About } from "./components/pages/About";
 import { Team } from "./components/pages/Team";
 import { Contact } from "./components/pages/Contact";
 import { NotFound } from "./components/pages/NotFound";
+import { ScrollToTop } from "./components/ScrollToTop";
+import { FloatingButtons } from "./components/FloatingButtons";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -102,11 +104,13 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-[var(--ivory)]">
         <ScrollProgress />
         <Navigation />
         <AnimatedRoutes />
         <Footer />
+        <FloatingButtons />
       </div>
     </BrowserRouter>
   );
